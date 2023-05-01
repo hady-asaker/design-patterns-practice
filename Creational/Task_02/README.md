@@ -13,3 +13,5 @@ Developing a Shape Factory: You can create a shape factory that can create diffe
 4- Create concrete shape classes that implement the abstract shape class or interface and provide the specific functionality for each type of shape.
 
 5- In your client code, create an instance of the concrete shape factory that you want to use, and call its createShape() method to create a shape object.
+
+6- Create new Class that class [ Shape ] could include methods for getting the area, perimeter of the shape.
