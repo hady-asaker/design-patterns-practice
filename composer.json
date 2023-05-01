@@ -1,0 +1,19 @@
+{
+    "name": "lenovo/design-patterns-practice",
+    "description": "Design Patterns Practice",
+    "require-dev": {
+        "phpunit/phpunit": "10.0"
+    },
+    "authors": [
+        {
+            "name": "hady-asaker",
+            "email": "hadyasaker8@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Creational\\": "Creational"
+        }
+    }
+}
