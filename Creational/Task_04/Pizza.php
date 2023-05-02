@@ -1,6 +1,6 @@
 <?php
 
-namespace Creational\AbstractFactory\Task4;
+namespace Creational\Builder\Task4;
 
 
 class Pizza
