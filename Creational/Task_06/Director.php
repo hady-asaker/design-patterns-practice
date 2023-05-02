@@ -1,8 +1,10 @@
 <?php
 
 namespace Creational\Builder\Task6;
-require_once "./WorkoutBuilderInterface.php";
-require_once "./StrengthTrainingBuilder.php";
+require_once "WorkoutBuilderInterface.php";
+require_once "StrengthTrainingBuilder.php";
+require_once "YogaBuilder.php";
+require_once "CardioBuilder.php";
 
 class Director
 {
@@ -23,7 +25,8 @@ class Director
     }
 }
 
-$Strength = new StrengthTrainingnBuilder();
-$Director = new Director($Strength);
+$Cardio = new CardioBuilder();
+$Director = new Director($Cardio);
 $Director->ProduceWorkout();
+
 echo "<pre>"; print_r($Director); echo "</pre>";

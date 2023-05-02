@@ -1,8 +1,9 @@
 <?php
 
 namespace Creational\Builder\Task6;
+require_once "Workout.php";
 
-class Cardio
+class Cardio extends Workout
 {
     private $NumberOfSets;
     private $NumberOfReps;

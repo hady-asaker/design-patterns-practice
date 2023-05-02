@@ -1,10 +1,10 @@
 <?php
 
 namespace Creational\Builder\Task6;
-require_once "./WorkoutBuilderInterface.php";
-require_once "./Workouts/Cardio.php";
+require_once "WorkoutBuilderInterface.php";
+require_once "Workouts/Cardio.php";
 
-class StrengthTrainingnBuilder implements WorkoutBuilderInterface
+class CardioBuilder implements WorkoutBuilderInterface
 {
     private $WorkoutType;
 
@@ -15,22 +15,22 @@ class StrengthTrainingnBuilder implements WorkoutBuilderInterface
 
     public function NumberOfSets()
     {
-        $this->WorkoutType->Sets(5);
+        $this->WorkoutType->Sets(1);
     }
 
     public function NumberOfReps()
     {
-        $this->WorkoutType->Reps(5);
+        $this->WorkoutType->Reps(1);
     }
 
     public function Equipments()
     {
-        $this->WorkoutType->SetEquipments(['gg'=>"sad", "asdsa"=>"sadsa"]);
+        $this->WorkoutType->SetEquipments(['Clothes'=>"Cardio-Clothes", "Equips"=>"Cardio"]);
     }
 
     public function Plan()
     {
-        $this->WorkoutType->SetPlan("plaaaaaaaan");
+        $this->WorkoutType->SetPlan("Cardio-plaaaaaaaan");
     }
 
     public function ReturnWorkout() :Cardio

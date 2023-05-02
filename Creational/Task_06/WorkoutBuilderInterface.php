@@ -9,5 +9,5 @@ interface WorkoutBuilderInterface
     public function NumberOfReps();
     public function Equipments();
     public function Plan();
-    public function ReturnWorkout();
+    public function ReturnWorkout() :Workout;
 }

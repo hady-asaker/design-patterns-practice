@@ -1,10 +1,10 @@
 <?php
 
 namespace Creational\Builder\Task6;
-require_once "./WorkoutBuilderInterface.php";
-require_once "./Workouts/Yoga.php";
+require_once "WorkoutBuilderInterface.php";
+require_once "Workouts/Yoga.php";
 
-class Yoga implements WorkoutBuilderInterface
+class YogaBuilder implements WorkoutBuilderInterface
 {
     private $WorkoutType;
 
@@ -25,12 +25,12 @@ class Yoga implements WorkoutBuilderInterface
 
     public function Equipments()
     {
-        $this->WorkoutType->SetEquipments(['gg'=>"sad", "asdsa"=>"sadsa"]);
+        $this->WorkoutType->SetEquipments(['Clothes'=>"Yoga-Clothes", "Equips"=>"Yoga"]);
     }
 
     public function Plan()
     {
-        $this->WorkoutType->SetPlan("plaaaaaaaan");
+        $this->WorkoutType->SetPlan("Yoga-Plaaaan");
     }
 
     public function ReturnWorkout() :Yoga

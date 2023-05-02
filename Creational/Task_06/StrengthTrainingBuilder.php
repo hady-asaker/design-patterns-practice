@@ -1,8 +1,8 @@
 <?php
 
 namespace Creational\Builder\Task6;
-require_once "./WorkoutBuilderInterface.php";
-require_once "./Workouts/StrengthTraining.php";
+require_once "WorkoutBuilderInterface.php";
+require_once "Workouts/StrengthTraining.php";
 
 class StrengthTrainingnBuilder implements WorkoutBuilderInterface
 {
@@ -25,12 +25,12 @@ class StrengthTrainingnBuilder implements WorkoutBuilderInterface
 
     public function Equipments()
     {
-        $this->WorkoutType->SetEquipments(['gg'=>"sad", "asdsa"=>"sadsa"]);
+        $this->WorkoutType->SetEquipments(['TTT'=>"aaa", "KKK"=>"ccc"]);
     }
 
     public function Plan()
     {
-        $this->WorkoutType->SetPlan("plaaaaaaaan");
+        $this->WorkoutType->SetPlan("Str-plaaaaaaaan");
     }
 
     public function ReturnWorkout() :StrengthTraining
