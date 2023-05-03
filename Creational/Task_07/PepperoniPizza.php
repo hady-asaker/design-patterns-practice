@@ -7,8 +7,18 @@ class PepperoniPizza implements PizzaInterface
 {
     private $type = "Pepperoni Pizza";
 
-    public function CreatePizza()
+    public function PreparePizza()
     {
-        return "Pepperoni Pizza";
+        return "Preparing Pepperoni Pizza";
+    }
+
+    public function bakePizza()
+    {
+        return "Baking Pepperoni Pizza";
+    }
+
+    public function ServePizza()
+    {
+        return "Serving Pepperoni Pizza";
     }
 }

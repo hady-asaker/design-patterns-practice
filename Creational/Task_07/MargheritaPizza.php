@@ -7,8 +7,18 @@ class MargheritaPizza implements PizzaInterface
 {
     private $type = "Margherita Pizza";
 
-    public function CreatePizza()
+    public function PreparePizza()
     {
-        return "Margherita Pizza";
+        return "Preparing Margherita Pizza";
+    }
+
+    public function bakePizza()
+    {
+        return "Baking Margherita Pizza";
+    }
+
+    public function ServePizza()
+    {
+        return "Serving Margherita Pizza";
     }
 }

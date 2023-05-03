@@ -7,8 +7,18 @@ class HawaiianPizza implements PizzaInterface
 {
     private $type = "Hawaiian Pizza";
 
-    public function CreatePizza()
+    public function PreparePizza()
     {
-        return "Hawaiian Pizza";
+        return "Preparing Hawaiian Pizza";
+    }
+
+    public function bakePizza()
+    {
+        return "Baking Hawaiian Pizza";
+    }
+
+    public function ServePizza()
+    {
+        return "Serving Hawaiian Pizza";
     }
 }
