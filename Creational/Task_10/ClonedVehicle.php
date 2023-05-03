@@ -22,7 +22,7 @@ class ClonedVehicle extends ProtoTypeVehicle
         $this->fuelLevel = 100;
         return new ClonedVehicle;
     }
-    public function FunctionName()
+    public function ShallowCopy()
     {
         $l = new ClonedVehicle;
         $m = new ProtoTypeVehicle();
@@ -36,7 +36,7 @@ $test = new ClonedVehicle();
 echo "<pre>"; print_r($test); echo "</pre>";
 
 // $t = clone $test;
-$test2 = $test->FunctionName();
+$test2 = $test->ShallowCopy();
 echo "<pre>"; print_r($test2); echo "</pre>";
 
 
