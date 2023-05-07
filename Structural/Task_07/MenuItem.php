@@ -22,4 +22,5 @@ class MenuItem implements ComponentInterface
     {
         return $this->Url;
     }
+    
 }

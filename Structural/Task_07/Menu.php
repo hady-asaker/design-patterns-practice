@@ -61,6 +61,7 @@ class Menu implements ComponentInterface
     {
         return $this->Components;
     }
+    
 }
 
 $Menu = new Menu("Parent", "https://parentMenu.com");

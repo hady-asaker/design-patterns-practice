@@ -37,4 +37,5 @@ class Task_07_Test extends TestCase
         $this->assertContains($Menu->getChild("Child 2"),$Menu->returnAll());
         $this->assertContains($Menu->getChild("MenuItem 4"),$Menu->returnAll());
     }
+
 }
