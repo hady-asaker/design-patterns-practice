@@ -5,5 +5,5 @@ namespace Structural\Bridge\Task4;
 interface AudioInterface
 {
     public function play();
-    public function setOutput(OutputDeviceInterface $device);
+    public function setOutputDevice(OutputDeviceInterface $device);
 }
