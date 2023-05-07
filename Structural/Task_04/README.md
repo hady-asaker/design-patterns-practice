@@ -23,6 +23,6 @@ Let's say you're working on a music player application that supports different a
 4- Implement the Implementor:
 
 * The Implementor implementation is the class that implements the Implementor interface. In this case, you can create a new class OutputDevice that implements the OutputDeviceInterface.
-* This class should have a method play(AudioInterface $audio) that takes an Audio object and plays it on the device. The OutputDevice class represents the output device and how it plays the audio file.
+* This class should have a method play() that Return an Output device. 
 
 5- Test the Bridge.
