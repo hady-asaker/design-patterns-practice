@@ -23,6 +23,6 @@ You're working on a new mobile game that involves different types of characters 
 4- Implement the Implementor:
 
 * The Implementor implementation is the class that implements the Implementor interface. In this case, you can create a new class Weapon that implements the WeaponInterface. 
-* This class should have a method useWeapon(CharacterInterface $character) that takes a Character object and applies the weapon to it. The Weapon class represents the weapon and how it is used by the character.
+* This class should have a method useWeapon(). The Weapon class represents the weapon and how it is used by the character.
 
 5- Test the Bridge.
