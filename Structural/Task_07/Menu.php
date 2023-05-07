@@ -3,7 +3,6 @@
 namespace Structural\Composite\Task7;
 require_once "ComponentInterface.php";
 require_once "MenuItem.php";
-use Structural\Composite\Task7\ComponentInterface;
 
 class Menu implements ComponentInterface
 {
@@ -57,6 +56,10 @@ class Menu implements ComponentInterface
         if (!$found) {
             echo "Component Not Found";
         }
+    }
+    public function returnAll()
+    {
+        return $this->Components;
     }
 }
 

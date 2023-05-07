@@ -2,7 +2,6 @@
 
 namespace Structural\Composite\Task7;
 require_once "ComponentInterface.php";
-use Structural\Composite\Task7\ComponentInterface;
 
 class MenuItem implements ComponentInterface
 {
