@@ -73,6 +73,10 @@ class Folder implements ComponentInterface
         }
 
     }
+    public function returnAll()
+    {
+        return $this->Components;
+    }
 
 }
 
