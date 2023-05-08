@@ -17,12 +17,14 @@ class Product
 $DataMapper = new DataMapper();
 $Product = new Product($DataMapper);
 
-$Product->Do->addProduct();
-$Product->Do->addProduct();
+// $Product->Do->addProduct("Btates", 150);
+// $Product->Do->addProduct("kware3", 250);
+// $Product->Do->addProduct("chipsy", 5);
+// $Product->Do->addProduct("Dog", 199.25);
 
-$Product->Do->removeProduct();
-$Product->Do->removeProduct();
+// $Product->Do->removeProduct("kiki");
+// $Product->Do->removeProduct("Btates");
 
-$Product->Do->getProduct();
-$Product->Do->getProduct();
-
+// $Product->Do->getProduct("kiki");
+// $Product->Do->getProduct("kware3");
+$Product->Do->getProduct("chipsy");
