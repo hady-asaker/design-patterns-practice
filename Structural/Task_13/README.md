@@ -25,10 +25,3 @@ Suppose you need to implement a Text Formatting System where you have multiple t
 * Create a PlainText object, then create several TextFormatter objects (e.g., BoldFormatter, ItalicFormatter, UnderlineFormatter) and wrap them around the PlainText object.
 * Call the format() method on the final decorated object to see the result, which should be a plain text with multiple formatting applied to it, such as bold, italic, and underline.
 
-
-
-
-
-
-
-

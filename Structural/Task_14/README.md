@@ -21,7 +21,7 @@ Suppose you need to implement a user authentication system that can authenticate
 * The Decorator adds new authentication methods to the basic Authenticator. In this case, you can create a FacebookAuthenticator class that extends the AuthenticatorDecorator class and authenticates users using Facebook login. 
 * You can also create a GoogleAuthenticator class that extends the AuthenticatorDecorator class and authenticates users using Google login.
 
-3- Test the Decorator: 
+4- Test the Decorator: 
 
 * Create a UsernamePasswordAuthenticator instance, wrap it in a FacebookAuthenticator instance, wrap the FacebookAuthenticator in a GoogleAuthenticator instance, and then authenticate some users using different methods. 
 * You should be able to authenticate users with their username and password using the UsernamePasswordAuthenticator, as well as with their Facebook or Google accounts using the respective decorators. 
