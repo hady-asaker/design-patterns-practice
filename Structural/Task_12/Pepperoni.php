@@ -5,7 +5,7 @@ require_once "PizzaComponentInterface.php";
 
 class Pepperoni implements PizzaComponentInterface
 {
-    private $component;
+    public $component;
 
     public function __construct(PizzaComponentInterface $component) 
     {

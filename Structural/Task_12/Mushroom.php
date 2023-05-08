@@ -4,6 +4,7 @@ namespace Structural\Decorator\Task12;
 require_once "PizzaComponentInterface.php";
 require_once "PlainPizza.php";
 require_once "Cheese.php";
+require_once "Pepperoni.php";
 
 class Mushroom implements PizzaComponentInterface
 {
