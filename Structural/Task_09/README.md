@@ -11,7 +11,6 @@ Let's say you have a User class that represents a user in your system. You also 
 
 * The Data Mapper interface should define methods for retrieving, storing, and deleting user data from the database.
 * The interface should be generic enough to work with any entity, not just the User class.
-* The interface should include methods for inserting, updating, and deleting data.
 
 2- Implement the Data Mapper interface:
 
