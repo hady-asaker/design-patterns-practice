@@ -10,7 +10,6 @@ class UsernamePasswordAuthenticator implements AuthenticatorInterface
     public $Authenticator;
     public $Authentication;
     
-
     public function __construct(AuthenticatorDecorator $Authenticator = null) 
     {
         $this->Authenticator = $Authenticator;

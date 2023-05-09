@@ -10,5 +10,4 @@ class GoogleAuthenticator extends AuthenticatorDecorator
         echo 'Authentication by Google Account' . "<br>";
         return $credentials;
     }
-
 }

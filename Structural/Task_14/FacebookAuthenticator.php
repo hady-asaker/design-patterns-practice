@@ -10,5 +10,4 @@ class FacebookAuthenticator extends AuthenticatorDecorator
         echo 'Authentication by Facebook Account' . "<br>";
         return $credentials;
     }
-
 }
