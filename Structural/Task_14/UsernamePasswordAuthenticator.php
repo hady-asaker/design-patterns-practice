@@ -1,5 +1,5 @@
 <?php
- 
+
 namespace Structural\Decorator\Task14;
 require_once "AuthenticatorInterface.php";
 require_once "FacebookAuthenticator.php";

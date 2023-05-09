@@ -1,5 +1,5 @@
 <?php
-  
+
 namespace Test;
 require_once "./Structural/Task_14/UsernamePasswordAuthenticator.php";
 
