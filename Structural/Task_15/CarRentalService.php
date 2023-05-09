@@ -14,8 +14,7 @@ class CarRentalService
         {
             $totalCost = $days * $pricePerDay;
             unset($this->AvailableCars[$index]);
-            return "Renting a $carType for $days days, costing $pricePerDay per day 
-            Total Cost = $totalCost";
+            return "Renting a $carType for $days days, costing $pricePerDay per day Total Cost = $totalCost";
         }
         else {
             return "This Car Not Available";
