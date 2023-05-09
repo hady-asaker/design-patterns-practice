@@ -1,12 +1,14 @@
 <?php
 
 namespace Structural\Decorator\Task14;
+require_once "AuthenticatorDecorator.php";
 
 class GoogleAuthenticator extends AuthenticatorDecorator
 {
-    public function authenticate()
+    public function authenticate($credentials)
     {
-        return 'Authentication by Google Account';
+        echo 'Authentication by Google Account' . "<br>";
+        return $credentials;
     }
 
 }

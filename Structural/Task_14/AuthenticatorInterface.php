@@ -4,5 +4,5 @@ namespace Structural\Decorator\Task14;
 
 interface AuthenticatorInterface
 {
-    public function authenticate();
+    public function authenticate($credentials);
 }

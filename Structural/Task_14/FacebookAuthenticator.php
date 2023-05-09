@@ -1,12 +1,14 @@
 <?php
 
 namespace Structural\Decorator\Task14;
+require_once "AuthenticatorDecorator.php";
 
 class FacebookAuthenticator extends AuthenticatorDecorator
 {
-    public function authenticate()
+    public function authenticate($credentials)
     {
-        return 'Authentication by Facebook Account';
+        echo 'Authentication by Facebook Account' . "<br>";
+        return $credentials;
     }
 
 }
