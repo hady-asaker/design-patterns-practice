@@ -1,28 +1,42 @@
 # Task 01
 
-Implement a logging chain of responsibility
+Implement a ticketing system with a logging chain of responsibility.
 
-In this task, you will implement a logging chain of responsibility. The chain will consist of multiple loggers, each responsible for handling log messages of a specific severity level. The loggers will be organized in a hierarchical manner, where a log message will be passed through the chain until it is handled by an appropriate logger based on its severity level.
+In this task, you will implement a ticketing system with a logging chain of responsibility. The system will handle various types of tickets from users, such as technical issues, billing inquiries, and feature requests. Each ticket will be processed by a chain of loggers that will handle and log relevant information based on the ticket's category.
 
 
 ## Steps
 
-1- Define the Logger interface:
+1-Define the Ticket class:
 
-* Define an interface that declares the method for handling log messages, such as handleLog(). This interface will be implemented by the concrete loggers.
+* Create a Ticket class with the following properties:
+* * category: string - Represents the category of the ticket (e.g., "Technical", "Billing", "Feature").
+* * description: string - Represents the description or details of the ticket.
 
+2-Define the Logger interface:
 
-2- Implement concrete Logger classes:
+* Create a Logger interface with the following method:
+* * handleTicket(Ticket $ticket): void - This method will handle the ticket and log relevant information based on its category.
 
-* Implement concrete logger classes that handle log messages of specific severity levels, such as InfoLogger, WarningLogger, and ErrorLogger. 
-* Each logger should have a reference to the next logger in the chain.
+3-Implement concrete Logger classes:
 
-3- Create the logging chain:
+* Implement concrete logger classes that handle tickets of specific categories:
+* * TechnicalLogger - Handles tickets with the "Technical" category and logs relevant information to a technical log file.
+* * BillingLogger - Handles tickets with the "Billing" category and logs relevant information to a billing log file.
+* * FeatureLogger - Handles tickets with the "Feature" category and logs relevant information to a feature log file.
+* * Each logger class should implement the Logger interface and provide its own implementation for the handleTicket() method.
 
-* Create an instance of each logger class and set up the chain by linking them together in the desired order. 
-* For example, the InfoLogger may be followed by the WarningLogger, which is then followed by the ErrorLogger.
+4-Create the logging chain:
 
-4- Pass the log messages through the chain:
+* Create instances of each logger class: technicalLogger, billingLogger, and featureLogger.
+* Set up the logging chain by linking the loggers together in the following order: 
+* * TechnicalLogger -> BillingLogger -> FeatureLogger.
+* * Set the next logger for technicalLogger as billingLogger.
+* * Set the next logger for billingLogger as featureLogger.
 
-* When a log message is received, pass it through the chain starting from the first logger. Each logger should check if it can handle the log message based on its severity level.
-* If it can handle the message, it should do so. Otherwise, it should pass the message to the next logger in the chain.
+5-Pass the tickets through the logging chain:
+
+* When a ticket is received, start the ticket handling process by calling the handleTicket() method on technicalLogger.
+* Each logger in the chain should check if it can handle the ticket based on its category.
+* If a logger can handle the ticket, it should log the relevant information and stop the propagation.
+* If a logger cannot handle the ticket, it should pass the ticket to the next logger in the chain by invoking the handleTicket() method on the next logger.
