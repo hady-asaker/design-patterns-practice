@@ -20,7 +20,7 @@ class ElectronicDevice
     {
         if ($this->ON === true) {
             echo "Device Off";
-            $this->ON === false;
+            $this->ON = false;
         }
         else {
             echo "Device Already Off";
