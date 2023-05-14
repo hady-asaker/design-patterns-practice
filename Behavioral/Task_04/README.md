@@ -1,37 +1,36 @@
 # Task 04
 
-Implement a text editor with editing operations
+Implement a restaurant ordering system using the Command pattern
 
-In this task, you will implement a text editor with various editing operations using the Command pattern. The text editor will allow users to perform actions such as inserting text, deleting text, and formatting text, and these actions will be encapsulated as commands.
+In this task, you will implement a restaurant ordering system that uses the Command pattern to handle customer orders. The system will allow customers to place orders for various food items, and these orders will be encapsulated as commands.
 
 
 ## Steps
 
 1- Define the Command interface:
 
-* Define an interface that declares methods such as execute(), undo(), and redo(). 
-* These methods will be implemented by concrete command classes.
+* Define an interface that declares a method such as execute(). This method will be implemented by concrete command classes.
 
 2- Implement concrete Command classes:
 
-* Implement concrete command classes that encapsulate the editing operations to be performed on the text. Each command should have its own execute(), undo(), and redo() methods that define the specific behavior.
+* Implement concrete command classes that encapsulate the customer orders. Each command should have its own execute() method that defines the specific behavior of processing the order.
 
-3- Create the TextEditor:
+3- Create the OrderHandler:
 
-* Create a TextEditor object that will handle user input and manage the execution of commands. 
-* The TextEditor should have methods to set the current command, execute the command, undo the last command, and redo the last undone command.
+* Create an OrderHandler object that will handle customer orders and manage the execution of commands.
+* The OrderHandler should have a method to set the current command and execute it.
 
-4- Associate commands with user actions:
+4- Associate commands with customer actions:
 
-* Associate specific command objects with user actions such as inserting text, deleting text, formatting text, etc. 
-* For example, you may associate an InsertCommand with the action of inserting text, a DeleteCommand with the action of deleting text, and a FormatCommand with the action of formatting text.
+* Associate specific command objects with customer actions such as placing an order for a food item.
+* For example, you may associate an OrderCommand with the action of placing an order for a specific food item.
 
 5- Execute commands:
 
-* When a user performs an action, set the corresponding command as the current command in the TextEditor and execute it. 
-* The command will carry out the necessary editing operation on the text.
+* When a customer places an order, create the corresponding command object and set it as the current command in the OrderHandler.
+* The command will carry out the necessary actions to process the order, such as notifying the kitchen staff, updating the inventory, and generating a receipt.
 
-6- Perform undo and redo operations:
+6- Process customer orders:
 
-* When the user wants to undo or redo an editing operation, call the respective methods in the TextEditor. 
-* The TextEditor should manage the command history and invoke the undo() or redo() methods of the appropriate command.
+* When the current command is set, execute it by calling the execute() method in the OrderHandler.
+* The OrderHandler will invoke the execute() method of the appropriate command, which will process the customer order.
