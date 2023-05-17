@@ -21,6 +21,7 @@ class CareTaker
     {
         $memento = array_pop($this->mementos);
         $this->TextEditor->restore($memento);
+        return $memento->getSnapShot();
     }
     public function getMementos()
     {
