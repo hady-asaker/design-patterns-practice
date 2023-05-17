@@ -1,33 +1,36 @@
 # Task 12
 
-Memento for Document Editing
+Weather Station
 
-In this task, you will implement the Memento pattern for a document editing application. The Memento pattern will allow the user to save and restore different versions of a document, enabling version control and history tracking.
+In this task, you will implement the Observer pattern for a weather station application. The weather station will have multiple observers that display different aspects of the weather, such as temperature, humidity, and pressure.
 
 
 ## Steps
 
-1-Create a Document class: 
+1-Define the Subject interface: 
 
-* Implement a Document class that represents a document in the editing application. 
-* This class should have methods for modifying the content of the document and saving its current state.
+* Create a Subject interface that declares methods for registering, removing, and notifying observers.
 
-2-Implement the Memento class: 
+2-Implement the WeatherStation class: 
 
-* Create a Memento class that serves as a snapshot of the document state. 
-* It should store the content and any other necessary information to restore the state.
+* Create a WeatherStation class that implements the Subject interface. 
+* This class will keep track of the weather data and notify the observers whenever there is a change in the weather.
 
-3-Create a History class: 
+3-Define the Observer interface: 
 
-* Implement a History class that acts as a caretaker for the document mementos. 
-* It should have methods for saving a memento, retrieving a memento, and managing multiple mementos for version control and history tracking.
+* Create an Observer interface that declares a method for updating the observer with the latest weather data.
 
-4-Integrate the Memento with the Document class: 
+4-Implement the WeatherDisplay classes: 
 
-* Modify the Document class to store and manage mementos. 
-* Implement methods to save the current state as a memento, retrieve a memento to restore a previous version, and update the document content accordingly.
+* Create concrete classes that implement the Observer interface. 
+* Each class will represent a different weather display, such as TemperatureDisplay, HumidityDisplay, and PressureDisplay. 
+* These classes will be responsible for displaying the weather data they are interested in.
 
-5-Test the document editing: 
+5-Register observers: 
 
-* Create an instance of the Document class and perform various editing operations. Save multiple mementos at different points to create a version history. 
-* Test the ability to restore previous versions using the mementos and track the changes made to the document.
+* In the WeatherStation class, provide methods for observers to register and unregister themselves.
+
+6-Notify observers: 
+
+* Whenever there is a change in the weather data, notify all registered observers by invoking their update methods. 
+* The observers will then fetch the latest weather data from the WeatherStation and update their displays accordingly.

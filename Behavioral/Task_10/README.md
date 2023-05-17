@@ -1,36 +1,32 @@
 # Task 10
 
-Mediator for Online Marketplace
+Memento for Text Editor
 
-In this task, you will implement a mediator for an online marketplace. The mediator will facilitate communication between buyers and sellers, allowing them to interact and negotiate prices for products.
+In this task, you will implement the Memento pattern for a text editor application. The Memento pattern will allow the user to save and restore different states of the text editor, enabling undo and redo functionality.
 
 ## Steps
 
-1-Define the Buyer and Seller classes: 
+1-Create a TextEditor class: 
 
-* Create classes called Buyer and Seller that represent the buyers and sellers in the online marketplace. 
-* The Buyer class should have properties such as a unique identifier, desired product, and methods to make offers and receive counteroffers. 
-* The Seller class should have properties such as a unique identifier, listed product, and methods to receive offers and negotiate prices.
+* Implement a TextEditor class that represents the text editor application. 
+* This class should have methods for modifying the text, saving the current state, and restoring a previous state.
 
-2-Create a Marketplace class: 
+2-Implement the Memento class: 
 
-* Implement a Marketplace class that acts as the mediator for the online marketplace. 
-* The Marketplace class should have methods to register buyers and sellers, handle offer and counteroffer exchanges, and facilitate price negotiations.
+* Create a Memento class that serves as a snapshot of the state of the text editor. 
+* It should store the text content and any other necessary information to restore the state.
 
-3-Implement the Mediator interface: 
+3-Create a Caretaker class: 
 
-* Define an interface called Mediator that declares methods for registering buyers and sellers, handling offer and counteroffer exchanges, and facilitating price negotiations.
+* Implement a Caretaker class that acts as a caretaker for the mementos. 
+* It should have methods for saving a memento, retrieving a memento, and managing multiple mementos for undo and redo functionality.
 
-4-Implement a concrete Mediator class: 
+4-Integrate the Memento with the TextEditor class: 
 
-* Create a class that implements the Mediator interface and provides the logic for mediating communication between buyers and sellers. 
-* This class should maintain a list of registered buyers and sellers, handle offer and counteroffer exchanges, and facilitate price negotiations.
+* Modify the TextEditor class to store and manage mementos. 
+* Implement methods to save the current state as a memento, retrieve a memento to restore a previous state, and update the text content accordingly.
 
-5-Integrate the Mediator with the Buyer and Seller classes: 
+5-Test the text editor: 
 
-* Modify the Buyer and Seller classes to store a reference to the mediator and use it to make offers, receive counteroffers, receive offers, and negotiate prices.
-
-6-Test the online marketplace: 
-
-* Create multiple instances of the Buyer and Seller classes and register them with the Marketplace mediator. 
-* Simulate offer and counteroffer exchanges between buyers and sellers and verify that the mediator correctly facilitates price negotiations and communications.
+* Create an instance of the TextEditor class and perform various text editing operations. 
+* Save multiple mementos at different points and test the ability to undo and redo changes by restoring previous states using the mementos.
