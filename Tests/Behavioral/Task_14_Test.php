@@ -5,9 +5,9 @@ require_once "./Behavioral/Task_14/User.php";
 
 use Behavioral\Observer\Task14\User;
 use Behavioral\Observer\Task14\Follower;
+use PHPUnit\Framework\TestCase;
 
-
-class Task_14_Test
+class Task_14_Test extends TestCase
 {
     public function testObserver()
     {
@@ -24,14 +24,11 @@ class Task_14_Test
         $test->Post('Hello World');
         $test->Post('Hello Everybody');
 
-        // echo '<pre>'; print_r($test->getFollowers()); echo'</pre>';
+        $followers = $test->getFollowers();
+        $this->assertEquals(3, count($followers));
 
-        echo $Follower1->getLeastNotification() . "<br>";
-        echo $Follower2->getLeastNotification() . "<br>";
-        $not = $Follower3->getLeastNotification() . "<br>";
-
-        echo '<pre>';
-        print_r($Follower1->getAllNotifications());
-        echo '</pre>';
+        $this->assertEquals(2, count($Follower1->getAllNotifications()));
+        $this->assertEquals(2, count($Follower2->getAllNotifications()));
+        $this->assertEquals(2, count($Follower3->getAllNotifications()));
     }
 }
