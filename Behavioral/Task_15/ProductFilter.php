@@ -21,13 +21,15 @@ class ProductFilter
         {
             if($specification->isSatisfiedBy($Product))
             {
-                echo $Product->getName() . " " . $Product->getPrice() . " " . $Product->getCategory() . "<br>";
+                return $Product->getName() . " " . $Product->getPrice() . " " . $Product->getCategory() . "<br>";
             }
         }
     }
     
     public function filterBySpecifications(array $specifications)
     {
+        $SatisfiedProducts = [];
+
         foreach ($this->Products as $Product) 
         {
             // Check product satisfies all the specifications.
@@ -45,8 +47,10 @@ class ProductFilter
             if ($satisfiedByAllSpecifications) 
             {
                 echo $Product->getName() . " " . $Product->getPrice() . " " . $Product->getCategory() . "<br>";
+                $SatisfiedProducts[] = $Product;
             }
         }
+        return $SatisfiedProducts;
     }
 
     public function getAllProducts()
@@ -77,8 +81,8 @@ $NameSpecification = new NameSpecification("Apple");
 $PriceSpecification = new PriceSpecification(24, 100);
 $CategorySpecification = new CategorySpecification("Fruit");
 
-// $test->filterBySpecification($NameSpecification);
-// $test->filterBySpecification($CategorySpecification);
-// $test->filterBySpecification($PriceSpecification);
+// echo $test->filterBySpecification($NameSpecification);
+// echo $test->filterBySpecification($CategorySpecification);
+// echo $test->filterBySpecification($PriceSpecification);
 
 $test->filterBySpecifications([$PriceSpecification, $CategorySpecification]);
