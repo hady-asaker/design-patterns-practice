@@ -26,15 +26,14 @@ class AuthenticationService
 
     public function isUserAuthenticated(User $user): bool
     {
-        return $this->isAuthenticate;
+        return $this->isAuthenticate && $this->user === $user;
     }
 }
 
-
-$user = new User("John", "Doe@dd", "admin");
+$user = new User("John", "Doe@dd", "Admin");
 
 $emailVerification = new EmailVerificationSpecification("Doe@dd");
-$accountStatus = new AccountStatusSpecification(1);
+$accountStatus = new AccountStatusSpecification(true);
 $role = new RoleSpecification("Admin");
 
 $authenticationService = new AuthenticationService();

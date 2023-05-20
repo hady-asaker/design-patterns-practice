@@ -5,9 +5,9 @@ require_once "SpecificationInterface.php";
 
 class AccountStatusSpecification implements SpecificationInterface
 {
-    private $status;
+    private bool $status;
 
-    public function __construct(string $status) 
+    public function __construct(bool $status) 
     {
         $this->status = $status;
     }

@@ -6,8 +6,8 @@ class User
 {
     private $name;
     private $email;
-    private $isVerified = 1;
-    private $isActive = 1;
+    private bool $isVerified = true;
+    private bool $isActive = true;
     private $role;
     
     public function __construct($name, $email, $role) 
