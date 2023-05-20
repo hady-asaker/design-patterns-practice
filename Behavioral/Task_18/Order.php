@@ -18,18 +18,19 @@ class Order
     public function setState(State $state)
     {
         $this->State = $state;
+        return $this->State;
     }
     
     public function placeOrder()
     {
         $this->State->placeOrder();
-        $this->setState(new PendingState());
+        return $this->setState(new PendingState());
     }
     
     public function cancelOrder()
     {
         $this->State->cancelOrder();
-        $this->setState(new CancelledState());
+        return $this->setState(new CancelledState());
     }
     
     public function shipOrder()
@@ -37,7 +38,7 @@ class Order
         if ($this->State == new PendingState) 
         {
             $this->State->shipOrder();
-            $this->setState(new ShippedState());
+            return $this->setState(new ShippedState());
         }
         else {
             echo "Place Order First";
@@ -49,7 +50,7 @@ class Order
         if ($this->State) 
         {
             $this->State->completeOrder();
-            $this->setState(new CompletedState());
+            return $this->setState(new CompletedState());
         }
         else {
             echo "Ship Order First";
